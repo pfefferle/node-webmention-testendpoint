@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Webmention Test-Endpoint</title>
+    <link rel="stylesheet" href="github-markdown.css">
+    <style>
+      {{ css }}
+
+      .markdown-body {
+        min-width: 200px;
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="markdown-body">
+
+<h1 id="webmention-test-endpoint">WebMention Test Endpoint</h1>
+<p>A tool to test your <a href="http://indiewebcamp.com/webmention">WebMention</a> client. Generates a demo-post and a demo-endpoint to test if your client parses the webmention-endpoint correctly and to check if the ping body is transmitted correctly.</p>
+<p>Be sure to also test the <a href="https://github.com/voxpelli/node-webmention-testpinger">node-webmention-testpinger</a> of <a href="https://github.com/voxpelli">@voxpelli</a></p>
+<h2 id="usage">Usage</h2>
+<p>First clone the repository</p>
+<pre><code>$ git clone https://github.com/pfefferle/node-webmention-testendpoint.git</code></pre>
+<p>Then run the app</p>
+<pre><code>$ node .</code></pre>
+<p>The tool will spin up a server on port 9247 and provides a test-post and a test-endpoint.</p>
+<h2 id="options">Options</h2>
+<p>You can find the test-post under</p>
+<pre><code>http://localhost:9247/post</code></pre>
+<p>To test several possibilities, you have some options. Options can be added as query strings and will change the output of the test-posting.</p>
+<h3 id="type">Type</h3>
+<p>With <code>type</code> you can choose the <a href="https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint">autodiscovery format</a>.</p>
+<pre><code>?type={link,a,head}</code></pre>
+<ul>
+<li><code>link</code> will add a <code>&lt;link rel=&quot;webmention&quot; href=&quot;...&quot; /&gt;</code> to the HTML-head</li>
+<li><code>a</code> will add a link <code>&lt;a rel=&quot;webmention&quot; href=&quot;...&quot;&gt;Endpoint&lt;/a&gt;</code> to the HTML-body</li>
+<li><code>head</code> will add a HTTP-Link header <code>Link: &lt;http://...&gt;; rel=&quot;webmention&quot;</code></li>
+</ul>
+<p>You can combine several types with a semicolon separated list.</p>
+<h3 id="rel">Rel</h3>
+<p>Use &#39;rel&#39; to define the link relation</p>
+<pre><code>?rel={id|uri|both}</code></pre>
+<ul>
+<li><code>id</code> uses the <code>webmention</code> relation: <code>&lt;link rel=&quot;webmention&quot; href=&quot;...&quot; /&gt;</code></li>
+<li><code>uri</code> uses the <code>http://webmention.org/</code> uri relation: <code>&lt;link rel=&quot;http://webmention.org/&quot; href=&quot;...&quot; /&gt;</code></li>
+<li><code>both</code> will add both relations: <code>&lt;link rel=&quot;webmention http://webmention.org/&quot; href=&quot;...&quot; /&gt;</code></li>
+</ul>
+<h3 id="abs">Abs</h3>
+<p>Use <code>abs</code> to choose between absolute and relative urls</p>
+<pre><code>?abs={true|false}</code></pre>
+<p>(the default is <code>false</code>)</p>
+<ul>
+<li><code>true</code> absolute endpoint-urls</li>
+<li><code>false</code> relative endpoint-urls</li>
+</ul>
+<h2 id="changelog">Changelog</h2>
+<h3 id="0-1-0">0.1.0</h3>
+<ul>
+<li>initial version</li>
+</ul>
+
+
+    </div>
+  </body>
+</html>
