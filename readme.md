@@ -50,7 +50,7 @@ Use 'rel' to define the link relation
 
 Use `url` to choose between absolute and relative urls
 
-    ?abs={abs|rel}
+    ?url={abs|rel}
 
 (the default is `abs`)
 
