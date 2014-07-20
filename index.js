@@ -30,15 +30,11 @@ server.route({
   method: '*',
   path: '/endpoint',
   handler: function (request, reply) {
-    console.log("Params:");
-    console.log(request.params);
-    console.log("\nQuery:");
-    console.log(request.query);
-    console.log("\nMethod:");
-    console.log(request.method);
-    console.log("\nBody:");
-    console.log(request.payload);
-    console.log("\n\n\n\n");
+    console.log("Params: %j", request.params);
+    console.log("Query: %j", request.query);
+    console.log("Method: %s", request.method);
+    console.log("Body: %j", request.payload);
+    console.log("\n\n\n");
     reply("Maunz!");
   }
 });
