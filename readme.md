@@ -57,7 +57,19 @@ Use `url` to choose between absolute and relative urls
 * `abs` absolute endpoint-urls
 * `rel` relative endpoint-urls
 
+### Status Code (HTTP)
+
+Use `status_code` to simulate for example error-scenarios via HTTP-codes
+
+    ?status_code=500
+
+Check out [RFC 7231](http://tools.ietf.org/html/rfc7231) and the [WebMention Spec](https://github.com/converspace/webmention/blob/master/README.md#error-responses) to find out more about the error codes.
+
 ## Changelog
+
+### 0.1.1
+
+* added HTTP status code support to simulate errors
 
 ### 0.1.0
 
