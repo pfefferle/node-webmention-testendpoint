@@ -1,8 +1,9 @@
 {
-    "name": "webmention-testendpoint",
+    "name": "node-webmention-testendpoint",
     "description": "A tool to test your webmention clients",
     "version": "0.1.1",
     "url": "http://github.com/pfefferle/node-webmention-testendpoint",
+    "repository": "http://github.com/pfefferle/node-webmention-testendpoint",
     "author": {
         "name": "Matthias Pfefferle",
         "url": "http://notizblog.org/"
