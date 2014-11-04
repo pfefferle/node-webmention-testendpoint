@@ -117,7 +117,7 @@ server.route({
         // show http link header
         if (params.head) {
             // Render the view with the custom greeting
-            reply.view('post.html', params).header('Link', '<' + params.endpoint + '?type=head&status_code=' + params.status_code + '>; rel=\'' + params.rel + '\'');
+            reply.view('post.html', params).header('Link', '<' + params.endpoint + '?type=head&status_code=' + params.status_code + '>; rel="' + params.rel + '"');
             // or not
         } else {
             reply.view('post.html', params);
