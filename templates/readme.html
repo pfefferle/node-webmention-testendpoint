@@ -22,18 +22,18 @@
 <p>Be sure to also test the <a href="https://github.com/voxpelli/node-webmention-testpinger">node-webmention-testpinger</a> of <a href="https://github.com/voxpelli">@voxpelli</a></p>
 <h2 id="usage">Usage</h2>
 <p>First clone the repository</p>
-<pre><code>$ git clone https://github.com/pfefferle/node-webmention-testendpoint.git</code></pre>
-<p>Then run the app</p>
-<pre><code>$ node .</code></pre>
-<p>The tool will spin up a server on port 9247 and provides a test-post and a test-endpoint.</p>
+<pre><code>$ git clone https://github.com/pfefferle/node-webmention-testendpoint.git
+</code></pre><p>Then run the app</p>
+<pre><code>$ node .
+</code></pre><p>The tool will spin up a server on port 9247 and provides a test-post and a test-endpoint.</p>
 <h2 id="options">Options</h2>
 <p>You can find the test-post under</p>
-<pre><code>http://localhost:9247/post</code></pre>
-<p>To test several possibilities, you have some options. Options can be added as query strings and will change the output of the test-posting.</p>
+<pre><code>http://localhost:9247/post
+</code></pre><p>To test several possibilities, you have some options. Options can be added as query strings and will change the output of the test-posting.</p>
 <h3 id="type">Type</h3>
 <p>With <code>type</code> you can choose the <a href="https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint">autodiscovery format</a>.</p>
-<pre><code>?type={link,a,head}</code></pre>
-<ul>
+<pre><code>?type={link,a,head}
+</code></pre><ul>
 <li><code>link</code> will add a <code>&lt;link rel=&quot;webmention&quot; href=&quot;...&quot; /&gt;</code> to the HTML-head</li>
 <li><code>a</code> will add a link <code>&lt;a rel=&quot;webmention&quot; href=&quot;...&quot;&gt;Endpoint&lt;/a&gt;</code> to the HTML-body</li>
 <li><code>head</code> will add a HTTP-Link header <code>Link: &lt;http://...&gt;; rel=&quot;webmention&quot;</code></li>
@@ -41,24 +41,24 @@
 <p>You can combine several types with a semicolon separated list.</p>
 <h3 id="rel">Rel</h3>
 <p>Use &#39;rel&#39; to define the link relation</p>
-<pre><code>?rel={id|uri|both}</code></pre>
-<ul>
+<pre><code>?rel={id|uri|both}
+</code></pre><ul>
 <li><code>id</code> uses the <code>webmention</code> relation: <code>&lt;link rel=&quot;webmention&quot; href=&quot;...&quot; /&gt;</code></li>
 <li><code>uri</code> uses the <code>http://webmention.org/</code> uri relation: <code>&lt;link rel=&quot;http://webmention.org/&quot; href=&quot;...&quot; /&gt;</code></li>
 <li><code>both</code> will add both relations: <code>&lt;link rel=&quot;webmention http://webmention.org/&quot; href=&quot;...&quot; /&gt;</code></li>
 </ul>
 <h3 id="url">URL</h3>
 <p>Use <code>url</code> to choose between absolute and relative urls</p>
-<pre><code>?url={abs|rel}</code></pre>
-<p>(the default is <code>abs</code>)</p>
+<pre><code>?url={abs|rel}
+</code></pre><p>(the default is <code>abs</code>)</p>
 <ul>
 <li><code>abs</code> absolute endpoint-urls</li>
 <li><code>rel</code> relative endpoint-urls</li>
 </ul>
 <h3 id="status-code-http-">Status Code (HTTP)</h3>
 <p>Use <code>status_code</code> to simulate for example error-scenarios via HTTP-codes</p>
-<pre><code>?status_code=500</code></pre>
-<p>Check out <a href="http://tools.ietf.org/html/rfc7231">RFC 7231</a> and the <a href="https://github.com/converspace/webmention/blob/master/README.md#error-responses">WebMention Spec</a> to find out more about the error codes.</p>
+<pre><code>?status_code=500
+</code></pre><p>Check out <a href="http://tools.ietf.org/html/rfc7231">RFC 7231</a> and the <a href="https://github.com/converspace/webmention/blob/master/README.md#error-responses">WebMention Spec</a> to find out more about the error codes.</p>
 <h2 id="changelog">Changelog</h2>
 <h3 id="0-1-1">0.1.1</h3>
 <ul>

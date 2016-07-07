@@ -1,21 +1,15 @@
 /* jshint strict: true */
 /* global require, console */
 
-var Hapi = require('hapi');
-var npmcss = require('npm-css');
-var github_markdown_css = npmcss('node_modules/github-markdown-css/github-markdown.css');
-
-var options = {
-    views: {
-        path: 'templates',
-        engines: {
-            html: 'handlebars'
-        }
-    }
-};
+const Hapi = require('hapi');
+const npmcss = require('npm-css');
+const github_markdown_css = npmcss('node_modules/github-markdown-css/github-markdown.css');
+const Hoek = require('hoek');
 
 // Create a server with a host, port, and options
-var server = Hapi.createServer('localhost', 9247, options);
+var server = new Hapi.Server();
+
+server.connection({port: 9247});
 
 // landing page
 server.route({
@@ -46,7 +40,7 @@ server.route({
         var statusCode = 200;
 
         if (request.query.status_code) {
-            statusCode = request.query.status_code;
+            statusCode = parseInt(request.query.status_code);
         }
 
         reply('Maunz!').code(statusCode);
@@ -123,6 +117,19 @@ server.route({
             reply.view('post.html', params);
         }
     }
+});
+
+server.register(require('vision'), (err) => {
+
+    Hoek.assert(!err, err);
+
+    server.views({
+        engines: {
+            html: require('handlebars')
+        },
+        relativeTo: __dirname,
+        path: 'templates'
+    });
 });
 
 // Start the server

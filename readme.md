@@ -1,6 +1,6 @@
-# WebMention Test Endpoint
+# Webmention Test Endpoint
 
-A tool to test your [WebMention](http://indiewebcamp.com/webmention) client. Generates a demo-post and a demo-endpoint to test if your client parses the webmention-endpoint correctly and to check if the ping body is transmitted correctly.
+A tool to test your [Webmention](https://www.w3.org/TR/webmention/) client. Generates a demo-post and a demo-endpoint to test if your client parses the webmention-endpoint correctly and to check if the ping body is transmitted correctly.
 
 Be sure to also test the [node-webmention-testpinger](https://github.com/voxpelli/node-webmention-testpinger) of [@voxpelli](https://github.com/voxpelli)
 
@@ -26,7 +26,7 @@ To test several possibilities, you have some options. Options can be added as qu
 
 ### Type
 
-With `type` you can choose the [autodiscovery format](https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint).
+With `type` you can choose the [autodiscovery format](https://www.w3.org/TR/webmention/#sender-discovers-receiver-webmention-endpoint).
 
     ?type={link,a,head}
 
@@ -63,14 +63,4 @@ Use `status_code` to simulate for example error-scenarios via HTTP-codes
 
     ?status_code=500
 
-Check out [RFC 7231](http://tools.ietf.org/html/rfc7231) and the [WebMention Spec](https://github.com/converspace/webmention/blob/master/README.md#error-responses) to find out more about the error codes.
-
-## Changelog
-
-### 0.1.1
-
-* added HTTP status code support to simulate errors
-
-### 0.1.0
-
-* initial version
+Check out [RFC 7231](http://tools.ietf.org/html/rfc7231) and the [Webmention Spec](https://www.w3.org/TR/webmention/#error-responses) to find out more about the error codes.
