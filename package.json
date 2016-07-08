@@ -1,7 +1,7 @@
 {
     "name": "node-webmention-testendpoint",
     "description": "A tool to test your webmention clients",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "url": "http://github.com/pfefferle/node-webmention-testendpoint",
     "repository": "http://github.com/pfefferle/node-webmention-testendpoint",
     "author": {
