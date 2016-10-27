@@ -1,7 +1,7 @@
 {
     "name": "node-webmention-testendpoint",
     "description": "A tool to test your webmention clients",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "url": "http://github.com/pfefferle/node-webmention-testendpoint",
     "repository": "http://github.com/pfefferle/node-webmention-testendpoint",
     "author": {
@@ -9,10 +9,10 @@
         "url": "http://notizblog.org/"
     },
     "dependencies": {
-        "github-markdown-css": "^2.3.0",
+        "github-markdown-css": "^2.4.0",
         "handlebars": "^4.0.5",
-        "hapi": "^13.5.0",
-        "hoek": "^4.0.1",
+        "hapi": "^15.0.0",
+        "hoek": "^4.1.0",
         "npm-css": "^0.2.3",
         "vision": "^4.1.0"
     },

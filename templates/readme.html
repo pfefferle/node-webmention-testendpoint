@@ -17,8 +17,8 @@
 <body>
     <div class="markdown-body">
 
-        <h1 id="webmention-test-endpoint">WebMention Test Endpoint</h1>
-<p>A tool to test your <a href="http://indiewebcamp.com/webmention">WebMention</a> client. Generates a demo-post and a demo-endpoint to test if your client parses the webmention-endpoint correctly and to check if the ping body is transmitted correctly.</p>
+        <h1 id="webmention-test-endpoint">Webmention Test Endpoint</h1>
+<p>A tool to test your <a href="https://www.w3.org/TR/webmention/">Webmention</a> client. Generates a demo-post and a demo-endpoint to test if your client parses the webmention-endpoint correctly and to check if the ping body is transmitted correctly.</p>
 <p>Be sure to also test the <a href="https://github.com/voxpelli/node-webmention-testpinger">node-webmention-testpinger</a> of <a href="https://github.com/voxpelli">@voxpelli</a></p>
 <h2 id="usage">Usage</h2>
 <p>First clone the repository</p>
@@ -31,7 +31,7 @@
 <pre><code>http://localhost:9247/post
 </code></pre><p>To test several possibilities, you have some options. Options can be added as query strings and will change the output of the test-posting.</p>
 <h3 id="type">Type</h3>
-<p>With <code>type</code> you can choose the <a href="https://github.com/converspace/webmention/blob/master/README.md#sender-discovers-receiver-endpoint">autodiscovery format</a>.</p>
+<p>With <code>type</code> you can choose the <a href="https://www.w3.org/TR/webmention/#sender-discovers-receiver-webmention-endpoint">autodiscovery format</a>.</p>
 <pre><code>?type={link,a,head}
 </code></pre><ul>
 <li><code>link</code> will add a <code>&lt;link rel=&quot;webmention&quot; href=&quot;...&quot; /&gt;</code> to the HTML-head</li>
@@ -58,16 +58,7 @@
 <h3 id="status-code-http-">Status Code (HTTP)</h3>
 <p>Use <code>status_code</code> to simulate for example error-scenarios via HTTP-codes</p>
 <pre><code>?status_code=500
-</code></pre><p>Check out <a href="http://tools.ietf.org/html/rfc7231">RFC 7231</a> and the <a href="https://github.com/converspace/webmention/blob/master/README.md#error-responses">WebMention Spec</a> to find out more about the error codes.</p>
-<h2 id="changelog">Changelog</h2>
-<h3 id="0-1-1">0.1.1</h3>
-<ul>
-<li>added HTTP status code support to simulate errors</li>
-</ul>
-<h3 id="0-1-0">0.1.0</h3>
-<ul>
-<li>initial version</li>
-</ul>
+</code></pre><p>Check out <a href="http://tools.ietf.org/html/rfc7231">RFC 7231</a> and the <a href="https://www.w3.org/TR/webmention/#error-responses">Webmention Spec</a> to find out more about the error codes.</p>
 
 
     </div>
