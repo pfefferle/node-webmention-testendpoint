@@ -4,6 +4,9 @@
     "version": "1.0.1",
     "url": "http://github.com/pfefferle/node-webmention-testendpoint",
     "repository": "http://github.com/pfefferle/node-webmention-testendpoint",
+    "bin": {
+        "webmention-testendpoint": "./index.js"
+    },
     "author": {
         "name": "Matthias Pfefferle",
         "url": "http://notizblog.org/"
