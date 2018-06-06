@@ -15,7 +15,7 @@
         "github-markdown-css": "2.10.0",
         "handlebars": "4.0.11",
         "hapi": "15.2.0",
-        "hoek": "4.2.1",
+        "hoek": "5.0.3",
         "npm-css": "0.2.3",
         "vision": "4.1.1"
     },
