@@ -17,7 +17,7 @@
         "hapi": "17.5.2",
         "hoek": "5.0.3",
         "npm-css": "0.2.3",
-        "vision": "5.3.3"
+        "vision": "5.4.4"
     },
     "devDependencies": {
         "grunt": "1.0.3",
