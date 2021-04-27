@@ -14,10 +14,10 @@
     "dependencies": {
         "github-markdown-css": "3.0.1",
         "handlebars": "4.7.7",
-        "hapi": "17.5.2",
-        "hoek": "5.0.3",
+        "hapi": "17.8.5",
+        "hoek": "5.0.4",
         "npm-css": "0.2.3",
-        "vision": "5.3.3"
+        "vision": "5.4.4"
     },
     "devDependencies": {
         "grunt": "1.4.0",
