@@ -20,7 +20,7 @@
         "vision": "5.4.4"
     },
     "devDependencies": {
-        "grunt": "1.4.1",
+        "grunt": "1.5.1",
         "grunt-markdown": "0.7.0"
     },
     "license" : {
